@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 08</title>
+    <script>
+          // Função
+          function calcular(){
+            
+            // Obter valores
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+            var operacao = document.getElementById("operacao").value
+
+            // Escolha e exibição
+            switch(operacao){
+                case "somar":
+                    document.getElementById("exibir").innerHTML = "A soma é "+(numero1+numero2)
+                break
+
+                case "subtrair":
+                    document.getElementById("exibir").innerHTML = "A subtração é "+(numero1-numero2)
+                break
+
+                case "multiplicar":
+                    document.getElementById("exibir").innerHTML = "A multiplicação é "+(numero1*numero2)
+                break
+
+                case "dividir":
+                    document.getElementById("exibir").innerHTML = "A divisão é "+(numero1/numero2)
+                break
+
+                default:
+                    document.getElementById("exibir").innerHTML = "Operação não encontrada"
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="text" placeholder="Informe um número" id="numero1">
+    <input type="text" placeholder="Informe outro número" id="numero2">
+    <input type="text" placeholder="Informe a operação" id="operacao">
+    <button onclick="calcular()">Calcular</button>
+
+    <h1 id="exibir"></h1>
+
+</body>
+</html>

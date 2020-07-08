@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 06</title>
+    <script>
+        function calcular(){
+            
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+            let n3 = parseFloat(document.getElementById("n3").value);
+            let faltas = parseInt(document.getElementById("faltas").value);
+
+            let media = (n1 + n2 + n3) / 3
+
+            if(faltas > 15){
+                document.getElementById("exibir").innerHTML = "Reprovado por faltas"
+            }else if(media >= 7){
+                document.getElementById("exibir").innerHTML = "Aprovado com média"
+            }else if(media >= 5){
+                document.getElementById("exibir").innerHTML = "Em exame"
+            }else{
+                document.getElementById("exibir").innerHTML = "Reprovado"
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Nota 1" id="n1">
+    <input type="text" placeholder="Nota 2" id="n2">
+    <input type="text" placeholder="Nota 3" id="n3">
+    <input type="text" placeholder="Faltas" id="faltas">
+    <button onclick="calcular()">Calcular</button>
+
+    <h1 id="exibir"></h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 05</title>
+    <script>
+        function calcular(){
+            let nota1 = parseInt(document.getElementById("n1").value);
+            let nota2 = parseInt(document.getElementById("n2").value);
+
+            if(nota1 == nota2){
+            document.getElementById("exibir").innerHTML = "A soma dos valores é " +(nota1 + nota2);
+        }else{
+            document.getElementById("exibir").innerHTML = "A multiplicação dos valores é " +(nota1 * nota2)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Nota 1" id="n1">
+    <input type="text" placeholder="Nota 2" id="n2">
+    <button onclick="calcular()">Calcular</button>
+
+    <h1 id="exibir"></h1>
+    
+</body>
+</html>

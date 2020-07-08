@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 04</title>
+    <script>
+
+        function calcular(){
+
+            
+            let ld = parseInt(document.getElementById("ld").value);
+            let le = parseInt(document.getElementById("le").value);
+            let li = parseInt(document.getElementById("li").value);
+            
+            //Condicional
+            if(ld == le && le == li){
+                document.getElementById("exibir").innerHTML = "Equilátero"
+            }else if(ld != le && le != li){
+                document.getElementById("exibir").innerHTML = "Escaleno"
+            }else{
+                document.getElementById("exibir").innerHTML = "Isóceles"
+            }
+        }
+            
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Lado direito" id="ld">
+    <input type="text" placeholder="Lado esquerdo" id="le">
+    <input type="text" placeholder="Inferior" id="li">
+    <button onclick="calcular()">Calcular</button>
+    <h1 id="exibir"></h1>
+
+</body>
+</html>
